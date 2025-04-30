@@ -18,6 +18,7 @@ const corsOptions = {
   ],
   credentials: true,
 }
+
 app.use(cors(corsOptions))
 
 // Express Config:
@@ -79,8 +80,8 @@ app.get("/api/toy/:toyId", (req, res) => {
 
 // Add 
 app.post("/api/toy", (req, res) => {
-  const loggedinUser = userService.validateToken(req.cookies.loginToken)
-  if (!loggedinUser) return res.status(401).send("Cannot add toy")
+  // const loggedinUser = userService.validateToken(req.cookies.loginToken)
+  // if (!loggedinUser) return res.status(401).send("Cannot add toy")
 
   const toy = {
     toyName: req.body.toyName,
@@ -96,7 +97,8 @@ app.post("/api/toy", (req, res) => {
   }
 
   toyService
-    .save(toy, loggedinUser)
+    // .save(toy, loggedinUser)
+    .save(toy)
     .then((savedToy) => res.send(savedToy))
     .catch((err) => {
       loggerService.error("Cannot save toy", err)
@@ -106,8 +108,8 @@ app.post("/api/toy", (req, res) => {
 
 // Edit 
 app.put("/api/toy/:id", (req, res) => {
-  const loggedinUser = userService.validateToken(req.cookies.loginToken)
-  if (!loggedinUser) return res.status(401).send("Cannot update toy")
+  // const loggedinUser = userService.validateToken(req.cookies.loginToken)
+  // if (!loggedinUser) return res.status(401).send("Cannot update toy")
 
   const toy = {
     ...req.body,
@@ -115,7 +117,8 @@ app.put("/api/toy/:id", (req, res) => {
   }
 
   toyService
-    .save(toy, loggedinUser)
+    // .save(toy, loggedinUser)
+    .save(toy)
     .then((savedToy) => res.send(savedToy))
     .catch((err) => {
       loggerService.error("Cannot save toy", err)
@@ -125,12 +128,13 @@ app.put("/api/toy/:id", (req, res) => {
 
 // Delete 
 app.delete("/api/toy/:toyId", (req, res) => {
-  const loggedinUser = userService.validateToken(req.cookies.loginToken)
-  if (!loggedinUser) return res.status(401).send("Cannot remove toy")
+  // const loggedinUser = userService.validateToken(req.cookies.loginToken)
+  // if (!loggedinUser) return res.status(401).send("Cannot remove toy")
 
   const { toyId } = req.params
   toyService
-    .remove(toyId, loggedinUser)
+    // .remove(toyId, loggedinUser)
+    .remove(toyId)
     .then(() => res.send("Removed!"))
     .catch((err) => {
       loggerService.error("Cannot remove toy", err)

@@ -34,5 +34,21 @@
     "fullname": "chen chen",
     "score": 10000,
     "_id": "RdFJH"
+  },
+  {
+    "_id": "vOT4G",
+    "username": "aa",
+    "password": "aa",
+    "fullname": "aa",
+    "score": 100,
+    "isAdmin": false
+  },
+  {
+    "_id": "X0ZQm",
+    "username": "bb",
+    "password": "bb",
+    "fullname": "bb",
+    "score": 100,
+    "isAdmin": false
   }
 ]

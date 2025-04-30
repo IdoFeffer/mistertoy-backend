@@ -1,19 +1,19 @@
 [
   {
-    "toyName": "Super Hero Figure",
-    "imgUrl": "https://cdn.pixabay.com/photo/2016/11/29/05/08/superhero-1868733_1280.jpg",
+    "toyName": "Super Hero Updated",
+    "imgUrl": "https://example.com/new.jpg",
     "_id": "8xrpu",
-    "price": 180,
+    "price": 999,
     "owner": {
       "_id": "u101",
       "fullname": "Puki Ja"
     },
     "labels": [
-      "Action",
-      "Collectible"
+      "Updated",
+      "Fun"
     ],
-    "createdAt": 1631000000000,
-    "inStock": true
+    "createdAt": 1670000000000,
+    "inStock": false
   },
   {
     "toyName": "Soccer Ball",
@@ -128,38 +128,6 @@
     "inStock": true
   },
   {
-    "toyName": "Action Figure",
-    "imgUrl": "https://cdn.pixabay.com/photo/2016/05/27/20/52/toy-1423928_1280.jpg",
-    "_id": "zW2yS",
-    "price": 170,
-    "owner": {
-      "_id": "u101",
-      "fullname": "Puki Ja"
-    },
-    "labels": [
-      "Action",
-      "Collectible"
-    ],
-    "createdAt": 1639000000000,
-    "inStock": true
-  },
-  {
-    "toyName": "Basketball Hoop",
-    "imgUrl": "https://cdn.pixabay.com/photo/2017/08/06/13/44/basketball-2593387_1280.jpg",
-    "_id": "eMJAN",
-    "price": 210,
-    "owner": {
-      "_id": "u102",
-      "fullname": "Muki Ba"
-    },
-    "labels": [
-      "Outdoor",
-      "Sport"
-    ],
-    "createdAt": 1640000000000,
-    "inStock": true
-  },
-  {
     "toyName": "Water Gun",
     "imgUrl": "https://cdn.pixabay.com/photo/2018/08/30/07/25/water-gun-3641813_1280.jpg",
     "price": 85,
@@ -178,7 +146,7 @@
   {
     "toyName": "Barbie Doll",
     "imgUrl": "https://cdn.pixabay.com/photo/2017/06/30/00/45/barbie-2451887_1280.jpg",
-    "price": 190,
+    "price": 320,
     "labels": [
       "Doll",
       "Fashion"
@@ -189,7 +157,19 @@
     "owner": {
       "_id": "u102",
       "fullname": "Muki Ba"
-    }
+    },
+    "msgs": [
+      {
+        "from": "Support",
+        "txt": "Hi! Need help?"
+      },
+      {
+        "from": "System",
+        "txt": "Toy viewed 3 times"
+      }
+    ],
+    "nextToyId": "FjV72",
+    "prevToyId": "zW2yS"
   },
   {
     "toyName": "Electric Scooter",
