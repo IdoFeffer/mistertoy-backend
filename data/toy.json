@@ -1,0 +1,258 @@
+[
+  {
+    "toyName": "Super Hero Figure",
+    "imgUrl": "https://cdn.pixabay.com/photo/2016/11/29/05/08/superhero-1868733_1280.jpg",
+    "_id": "8xrpu",
+    "price": 180,
+    "owner": {
+      "_id": "u101",
+      "fullname": "Puki Ja"
+    },
+    "labels": [
+      "Action",
+      "Collectible"
+    ],
+    "createdAt": 1631000000000,
+    "inStock": true
+  },
+  {
+    "toyName": "Soccer Ball",
+    "imgUrl": "https://cdn.pixabay.com/photo/2016/11/29/05/08/soccer-1867175_1280.jpg",
+    "_id": "AIUjL",
+    "price": 90,
+    "owner": {
+      "_id": "u102",
+      "fullname": "Muki Ba"
+    },
+    "labels": [
+      "Sport",
+      "Outdoor"
+    ],
+    "createdAt": 1632000000000,
+    "inStock": true
+  },
+  {
+    "toyName": "Magic Set",
+    "imgUrl": "https://cdn.pixabay.com/photo/2015/09/05/22/46/magic-924867_1280.jpg",
+    "_id": "Ust1i",
+    "price": 120,
+    "owner": {
+      "_id": "u103",
+      "fullname": "Admin User"
+    },
+    "labels": [
+      "Mind Game",
+      "Creative"
+    ],
+    "createdAt": 1633000000000,
+    "inStock": false
+  },
+  {
+    "toyName": "Building Blocks",
+    "imgUrl": "https://cdn.pixabay.com/photo/2017/06/26/02/47/lego-2443587_1280.jpg",
+    "_id": "bmWkQ",
+    "price": 110,
+    "owner": {
+      "_id": "u104",
+      "fullname": "Kiki Ki"
+    },
+    "labels": [
+      "Building",
+      "Educational"
+    ],
+    "createdAt": 1634000000000,
+    "inStock": true
+  },
+  {
+    "toyName": "Rubik Cube",
+    "imgUrl": "https://cdn.pixabay.com/photo/2015/01/08/18/29/rubik-s-cube-593654_1280.jpg",
+    "_id": "ywqVu",
+    "price": 60,
+    "owner": {
+      "_id": "u101",
+      "fullname": "Puki Ja"
+    },
+    "labels": [
+      "Puzzle",
+      "Mind Game"
+    ],
+    "createdAt": 1635000000000,
+    "inStock": true
+  },
+  {
+    "toyName": "Train Set",
+    "imgUrl": "https://cdn.pixabay.com/photo/2014/11/04/09/06/toy-train-516100_1280.jpg",
+    "_id": "APTFu",
+    "price": 200,
+    "owner": {
+      "_id": "u102",
+      "fullname": "Muki Ba"
+    },
+    "labels": [
+      "On wheels",
+      "Indoor"
+    ],
+    "createdAt": 1636000000000,
+    "inStock": true
+  },
+  {
+    "toyName": "Board Game",
+    "imgUrl": "https://cdn.pixabay.com/photo/2017/05/08/13/15/chess-2295274_1280.jpg",
+    "_id": "FjV72",
+    "price": 140,
+    "owner": {
+      "_id": "u103",
+      "fullname": "Admin User"
+    },
+    "labels": [
+      "Box game",
+      "Mind Game"
+    ],
+    "createdAt": 1637000000000,
+    "inStock": false
+  },
+  {
+    "toyName": "Drum Set",
+    "imgUrl": "https://cdn.pixabay.com/photo/2016/11/19/14/00/drum-1839387_1280.jpg",
+    "_id": "QWoGA",
+    "price": 230,
+    "owner": {
+      "_id": "u104",
+      "fullname": "Kiki Ki"
+    },
+    "labels": [
+      "Music",
+      "Creative"
+    ],
+    "createdAt": 1638000000000,
+    "inStock": true
+  },
+  {
+    "toyName": "Action Figure",
+    "imgUrl": "https://cdn.pixabay.com/photo/2016/05/27/20/52/toy-1423928_1280.jpg",
+    "_id": "zW2yS",
+    "price": 170,
+    "owner": {
+      "_id": "u101",
+      "fullname": "Puki Ja"
+    },
+    "labels": [
+      "Action",
+      "Collectible"
+    ],
+    "createdAt": 1639000000000,
+    "inStock": true
+  },
+  {
+    "toyName": "Basketball Hoop",
+    "imgUrl": "https://cdn.pixabay.com/photo/2017/08/06/13/44/basketball-2593387_1280.jpg",
+    "_id": "eMJAN",
+    "price": 210,
+    "owner": {
+      "_id": "u102",
+      "fullname": "Muki Ba"
+    },
+    "labels": [
+      "Outdoor",
+      "Sport"
+    ],
+    "createdAt": 1640000000000,
+    "inStock": true
+  },
+  {
+    "toyName": "Water Gun",
+    "imgUrl": "https://cdn.pixabay.com/photo/2018/08/30/07/25/water-gun-3641813_1280.jpg",
+    "price": 85,
+    "labels": [
+      "Outdoor",
+      "Water Game"
+    ],
+    "createdAt": 1641000000000,
+    "inStock": false,
+    "_id": "f5154",
+    "owner": {
+      "_id": "u101",
+      "fullname": "Puki Ja"
+    }
+  },
+  {
+    "toyName": "Barbie Doll",
+    "imgUrl": "https://cdn.pixabay.com/photo/2017/06/30/00/45/barbie-2451887_1280.jpg",
+    "price": 190,
+    "labels": [
+      "Doll",
+      "Fashion"
+    ],
+    "createdAt": 1642000000000,
+    "inStock": true,
+    "_id": "8b2de",
+    "owner": {
+      "_id": "u102",
+      "fullname": "Muki Ba"
+    }
+  },
+  {
+    "toyName": "Electric Scooter",
+    "imgUrl": "https://cdn.pixabay.com/photo/2016/11/29/02/14/scooter-1866781_1280.jpg",
+    "price": 500,
+    "labels": [
+      "Outdoor",
+      "Battery Powered"
+    ],
+    "createdAt": 1643000000000,
+    "inStock": true,
+    "_id": "a0d78",
+    "owner": {
+      "_id": "u103",
+      "fullname": "Admin User"
+    }
+  },
+  {
+    "toyName": "Musical Piano",
+    "imgUrl": "https://cdn.pixabay.com/photo/2016/05/06/12/22/keyboard-1375783_1280.jpg",
+    "price": 270,
+    "labels": [
+      "Music",
+      "Creative"
+    ],
+    "createdAt": 1644000000000,
+    "inStock": true,
+    "_id": "36bb4",
+    "owner": {
+      "_id": "u104",
+      "fullname": "Kiki Ki"
+    }
+  },
+  {
+    "toyName": "Outdoor Tent",
+    "imgUrl": "https://cdn.pixabay.com/photo/2016/03/27/22/22/tent-1289822_1280.jpg",
+    "price": 320,
+    "labels": [
+      "Outdoor",
+      "Adventure"
+    ],
+    "createdAt": 1645000000000,
+    "inStock": true,
+    "_id": "7506d",
+    "owner": {
+      "_id": "u101",
+      "fullname": "Puki Ja"
+    }
+  },
+  {
+    "toyName": "Test Toy from Postman",
+    "price": 99,
+    "imgUrl": "https://example.com/toy.jpg",
+    "labels": [
+      "Creative",
+      "Test"
+    ],
+    "inStock": true,
+    "createdAt": 1746010634144,
+    "owner": {
+      "_id": "Uo93j",
+      "fullname": "admin"
+    },
+    "_id": "vpOsx"
+  }
+]
