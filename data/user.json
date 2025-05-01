@@ -58,5 +58,21 @@
     "fullname": "hh",
     "score": 80,
     "isAdmin": false
+  },
+  {
+    "_id": "X2d47",
+    "username": "jj",
+    "password": "jj",
+    "fullname": "jj",
+    "score": 100,
+    "isAdmin": false
+  },
+  {
+    "_id": "ziZUk",
+    "username": "ll",
+    "password": "ll",
+    "fullname": "ll",
+    "score": 9001,
+    "isAdmin": false
   }
 ]

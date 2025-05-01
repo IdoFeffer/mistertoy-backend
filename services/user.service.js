@@ -60,7 +60,7 @@ function save(user) {
             username: user.username,
             password: user.password,
             fullname: user.fullname,
-            score: 100,
+            score: 10000,
             isAdmin: false,
         }
         users.push(userToSave)
