@@ -30,7 +30,7 @@ app.set("query parser", "extended")
 // Express Routing:
 
 // REST API for Toys
-// Get toys 
+// Get toys
 app.get("/api/toy", (req, res) => {
   const filterBy = {
     txt: req.query.txt || "",
@@ -78,10 +78,10 @@ app.get("/api/toy/:toyId", (req, res) => {
     })
 })
 
-// Add 
+// Add
 app.post("/api/toy", (req, res) => {
-  // const loggedinUser = userService.validateToken(req.cookies.loginToken)
-  // if (!loggedinUser) return res.status(401).send("Cannot add toy")
+  const loggedinUser = userService.validateToken(req.cookies.loginToken)
+  if (!loggedinUser) return res.status(401).send("Cannot add toy")
 
   const toy = {
     toyName: req.body.toyName,
@@ -97,8 +97,8 @@ app.post("/api/toy", (req, res) => {
   }
 
   toyService
-    // .save(toy, loggedinUser)
-    .save(toy)
+    .save(toy, loggedinUser)
+    // .save(toy)
     .then((savedToy) => res.send(savedToy))
     .catch((err) => {
       loggerService.error("Cannot save toy", err)
@@ -106,40 +106,50 @@ app.post("/api/toy", (req, res) => {
     })
 })
 
-// Edit 
+// Edit
 app.put("/api/toy/:id", (req, res) => {
-  // const loggedinUser = userService.validateToken(req.cookies.loginToken)
-  // if (!loggedinUser) return res.status(401).send("Cannot update toy")
+  const loggedinUser = userService.validateToken(req.cookies.loginToken)
+  if (!loggedinUser) return res.status(401).send("Cannot update toy")
 
   const toy = {
     ...req.body,
     _id: req.params.id,
   }
+  toyService.getById(toy._id).then((existingToy) => {
+    if (!loggedinUser.isAdmin && loggedinUser._id !== existingToy.owner._id)
+      return res.status(403).send("Permission denied")
 
-  toyService
-    // .save(toy, loggedinUser)
-    .save(toy)
-    .then((savedToy) => res.send(savedToy))
-    .catch((err) => {
-      loggerService.error("Cannot save toy", err)
-      res.status(400).send("Cannot save toy")
-    })
+    toyService
+      .save(toy, loggedinUser)
+      // .save(toy)
+      .then((savedToy) => res.send(savedToy))
+      .catch((err) => {
+        loggerService.error("Cannot save toy", err)
+        res.status(400).send("Cannot save toy")
+      })
+  })
 })
 
-// Delete 
+// Delete
 app.delete("/api/toy/:toyId", (req, res) => {
-  // const loggedinUser = userService.validateToken(req.cookies.loginToken)
-  // if (!loggedinUser) return res.status(401).send("Cannot remove toy")
+  const loggedinUser = userService.validateToken(req.cookies.loginToken)
+  if (!loggedinUser) return res.status(401).send("Cannot remove toy")
 
   const { toyId } = req.params
-  toyService
-    // .remove(toyId, loggedinUser)
-    .remove(toyId)
-    .then(() => res.send("Removed!"))
-    .catch((err) => {
-      loggerService.error("Cannot remove toy", err)
-      res.status(400).send("Cannot remove toy")
-    })
+
+  toyService.getById(toyId).then((toy) => {
+    if (!loggedinUser.isAdmin && loggedinUser._id !== toy.owner._id)
+      return res.status(403).send("Permission denied")
+
+    toyService
+      .remove(toyId, loggedinUser)
+      // .remove(toyId)
+      .then(() => res.send("Removed!"))
+      .catch((err) => {
+        loggerService.error("Cannot remove toy", err)
+        res.status(400).send("Cannot remove toy")
+      })
+  })
 })
 
 // User API
@@ -166,6 +176,7 @@ app.get("/api/user/:userId", (req, res) => {
 })
 
 // Auth API
+// Login
 app.post("/api/auth/login", (req, res) => {
   const credentials = req.body
 
@@ -186,6 +197,7 @@ app.post("/api/auth/login", (req, res) => {
     })
 })
 
+// Signup
 app.post("/api/auth/signup", (req, res) => {
   const credentials = req.body
 
@@ -206,6 +218,7 @@ app.post("/api/auth/signup", (req, res) => {
     })
 })
 
+// Logout
 app.post("/api/auth/logout", (req, res) => {
   res.clearCookie("loginToken")
   res.send("logged-out!")
