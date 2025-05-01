@@ -55,7 +55,7 @@ function query(filterBy = {}) {
 function getById(toyId) {
   const toy = toys.find((toy) => toy._id === toyId)
   if (!toy) return Promise.reject("Toy not found")
-  toy.msgs = ["Nice!", "Great toy!", "My kid loved it!"] // דוגמא להוספת msgs
+  toy.msgs = ["Nice!", "Great toy!", "My kid loved it!"] 
   return Promise.resolve(toy)
 }
 
@@ -90,3 +90,4 @@ function _saveToysToFile() {
     })
   })
 }
+
