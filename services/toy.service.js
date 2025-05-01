@@ -15,18 +15,21 @@ const toys = utilService.readJsonFile("data/toy.json")
 function query(filterBy = {}) {
   let toysToReturn = [...toys]
 
+  // Text 
   const regex = new RegExp(filterBy.txt || "", "i")
   toysToReturn = toysToReturn.filter((toy) => regex.test(toy.toyName))
 
+  // In stock 
   if (filterBy.inStock !== undefined) {
     toysToReturn = toysToReturn.filter(
       (toy) => toy.inStock === filterBy.inStock
     )
   }
 
-  if (filterBy.label && filterBy.label !== "all") {
-    toysToReturn = toysToReturn.filter((toy) =>
-      toy.labels.includes(filterBy.label)
+// Label 
+  if (filterBy.labels && filterBy.labels.length) {
+    toysToReturn = toysToReturn.filter(toy =>
+      filterBy.labels.some(label => toy.labels.includes(label))
     )
   }
 
@@ -40,8 +43,7 @@ function query(filterBy = {}) {
     })
   }
 
-  
-
+  // Pages 
   if (filterBy.pageIdx !== undefined) {
     const startIdx = filterBy.pageIdx * PAGE_SIZE
     toysToReturn = toysToReturn.slice(startIdx, startIdx + PAGE_SIZE)

@@ -50,5 +50,13 @@
     "fullname": "bb",
     "score": 100,
     "isAdmin": false
+  },
+  {
+    "_id": "D3P2r",
+    "username": "hh",
+    "password": "hh",
+    "fullname": "hh",
+    "score": 80,
+    "isAdmin": false
   }
 ]
