@@ -1,10 +1,10 @@
-import { utilService } from './util.service.js'
+// import { utilService } from './util.service.js'
 
-export const ansService = {
-    getAns
-}
+// export const ansService = {
+//     getAns
+// }
 
-function getAns() {
-    return utilService.httpGet('https://yesno.wtf/api')
-}
+// function getAns() {
+//     return utilService.httpGet('https://yesno.wtf/api')
+// }
 

@@ -27,17 +27,9 @@
     "username": "admin",
     "password": "admin",
     "fullname": "admin",
-    "score": 9676,
+    "score": 9321,
     "_id": "Uo93j",
     "isAdmin": true
-  },
-  {
-    "username": "chen",
-    "password": "chen",
-    "fullname": "chen chen",
-    "score": 10000,
-    "_id": "RdFJH",
-    "isAdmin": false
   },
   {
     "username": "ido",
@@ -45,13 +37,13 @@
     "fullname": "Ido Feffer",
     "score": 10000,
     "_id": "RdFJH",
-    "isAdmin": true
+    "isAdmin": false
   },
   {
-    "_id": "18GUq",
-    "username": "aa",
-    "password": "aa",
-    "fullname": "aa",
+    "_id": "KLEFc",
+    "username": "zz",
+    "password": "zz",
+    "fullname": "zz",
     "score": 10000,
     "isAdmin": false
   }
