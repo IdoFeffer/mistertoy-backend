@@ -1,16 +1,18 @@
 import { ObjectId } from 'mongodb'
 
 import { asyncLocalStorage } from '../../services/als.service.js'
-import { logger } from '../../services/logger.service.js'
+import { loggerService } from '../../services/logger.service.js'
 import { dbService } from '../../services/db.service.js'
 
 export const reviewService = { query, remove, add }
 
 async function query(filterBy = {}) {
+    
 	try {
-		const criteria = _buildCriteria(filterBy)
+        const criteria = _buildCriteria(filterBy)
 		const collection = await dbService.getCollection('review')
-        
+        var reviews = await collection.find({}).toArray()
+        console.log(`fillterBy:` , filterBy)
 		var reviews = await collection.aggregate([
             {
                 $match: criteria,
@@ -46,10 +48,9 @@ async function query(filterBy = {}) {
             }
         ]).toArray()
 
-        // console.log(reviews)
 		return reviews
 	} catch (err) {
-		logger.error('cannot get reviews', err)
+		loggerService.error('cannot get reviews', err)
 		throw err
 	}
 }
@@ -78,12 +79,12 @@ async function add(review) {
     try {
         const reviewToAdd = {
             byUserId: ObjectId.createFromHexString(review.byUserId),
-			aboutUserId: ObjectId.createFromHexString(review.aboutUserId),
+			aboutToyId: ObjectId.createFromHexString(review.aboutToyId),
 			txt: review.txt,
 		}
 		const collection = await dbService.getCollection('review')
 		await collection.insertOne(reviewToAdd)
-        
+        console.log(reviewToAdd);
 		return reviewToAdd
 	} catch (err) {
 		logger.error('cannot add review', err)
@@ -94,8 +95,8 @@ async function add(review) {
 function _buildCriteria(filterBy) {
 	const criteria = {}
 
-	if (filterBy.byUserId) {
-        criteria.byUserId = ObjectId.createFromHexString(filterBy.byUserId)
+	if (filterBy.aboutToyId) {
+        criteria.aboutToyId = ObjectId.createFromHexString(filterBy.aboutToyId)
     }
 	return criteria
 }
